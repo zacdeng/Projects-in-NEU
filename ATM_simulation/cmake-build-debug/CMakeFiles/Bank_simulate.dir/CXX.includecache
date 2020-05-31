@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/BankAcc.cpp
+BankAcc.h
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/BankAcc.h
+ctime
+-
+fstream
+-
+sstream
+-
+string.h
+-
+
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/BankAcc.h
+UI_Design.h
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/UI_Design.h
+
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/UI_Design.h
+iostream
+-
+
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/main.cpp
+iostream
+-
+BankAcc.h
+D:/study_software/CLion 2019.3.4/Clion_Projects/Bank_simulate/BankAcc.h
+
