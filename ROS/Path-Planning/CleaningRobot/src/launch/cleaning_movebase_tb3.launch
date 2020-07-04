@@ -1,0 +1,17 @@
+<launch>
+<arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
+  <include file="$(find turtlebot3_gazebo)/launch/gazebo.launch" />
+
+    <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+        <arg name="model" value="$(arg model)" />
+        <arg name="map_file" value="$(find turtlebot3_navigation)/maps/clean_room.yaml" />
+    </include>
+
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cleaning_robot)/cleaning.rviz"/> -->
+
+  <node pkg="cleaning_robot" type="cleaning_movebase_node" respawn="false" name="cleaning_covering_node" output="screen" clear_params="true">
+    <rosparam file="$(find cleaning_robot)/config/costmap_common_params.yaml" command="load" ns="cleaning_costmap" />
+    <rosparam file="$(find cleaning_robot)/config/cleaning_costmap_params.yaml" command="load" />
+  </node>
+  
+</launch>
